@@ -1,0 +1,166 @@
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 800px;
+    background-color: var(--header-background-color);
+    
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/banner/florest.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+    filter: saturate(0);
+    opacity: 0.2;
+}
+
+.header-content{
+    max-width: 700px;
+    padding: 5rem 1.25rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.header-content img{
+    width: 80%;
+}
+
+.header-content p{
+    margin: 1.8rem 0 3.1rem;
+}
+
+.header-content button{
+    border: 0.18rem solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.header-content button:hover{
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+}
+
+.world-characters{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#top-characters{
+    top: 0.5rem;
+    height: 100%;
+    background-color: var(--character-top-image-color);
+    mask: var(--character-top-image-src) bottom / contain no-repeat;
+    
+}
+
+#bottom-characters {
+    position: relative;
+    height: 31.2rem;
+    background-color: var(--character-bottom-image-color);
+    transform: rotateZ(180deg) scaleX(-1);
+    mask: var(--character-bottom-image-src) bottom / contain no-repeat;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 95px;
+}
+
+#section-inverted-world{
+    margin-top: 2rem;
+    gap: 12rem;
+}
+
+#section-inverted-world .section-texts{
+    width: 41%;
+}
+
+#section-inverted-world .section-texts h2{
+    max-width: 18.7rem;
+}
+
+#section-inverted-world .invert-element{
+    position: relative;
+    bottom: 10rem;
+}
+
+#section-stranger-things-trailer{
+    gap: 12rem;
+} 
+
+#section-stranger-things-trailer .section-texts{
+    width: 36%;
+    text-align: end;
+}
+
+.video-frame{
+    padding: 0.18rem 0.18rem 0;
+    background-image: linear-gradient(var(--primary-color), var(--primary-color-contrast));
+    box-shadow: var(--primary-color) -1.56rem 1.5rem;
+}
+
+#section-stranger-things-gallery{
+    background: var(--background-lamp-image) 200% / 75% no-repeat;
+}
+
+#section-stranger-things-gallery .section-text h2{
+    width: 64%;
+    
+}
+
+#section-stranger-things-gallery .gallery-container{
+    display: flex;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    gap: 5rem;
+    list-style: none;
+   
+}
+
+#section-stranger-things-gallery .gallery-image{
+    width: 14.56rem;
+    height: 14.5rem;
+    background-color: var(--highlight-color);
+    padding: 0.5rem;
+    outline: 1.2rem solid var(--highlight-color);
+    border: 0.1rem var(--primary-color) solid;
+}
+
+#section-stranger-things-gallery .gallery-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#section-form{
+    flex-direction: column;
+    align-items: center;
+}
+
+#section-form p{
+    width: 54rem;
+    text-align: center;
+}
+
+.form-content{
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+.form-content h3{
+    width: 29.6rem;
+    color: var(--highlight-color);
+}
+.form-content span{
+    color: var(--primary-color);
+}
