@@ -62,7 +62,7 @@ header::before{
 
 #bottom-characters {
     position: relative;
-    height: 31.2rem;
+    height: 30rem;
     background-color: var(--character-bottom-image-color);
     transform: rotateZ(180deg) scaleX(-1);
     mask: var(--character-bottom-image-src) bottom / contain no-repeat;
@@ -71,7 +71,7 @@ header::before{
 section {
     display: flex;
     justify-content: center;
-    margin-bottom: 95px;
+    background-color: var(--character-top-image-color);
 }
 
 #section-inverted-world{
@@ -87,13 +87,23 @@ section {
     max-width: 18.7rem;
 }
 
+#section-inverted-world .section-texts p{
+    width: 37rem;
+}
+
 #section-inverted-world .invert-element{
     position: relative;
-    bottom: 10rem;
+    bottom: 8rem;
+    height: 25rem;
+}
+
+.dark-theme .invert-element{
+    transform: rotateZ(180deg) scaleX(-1);
 }
 
 #section-stranger-things-trailer{
     gap: 12rem;
+    padding-bottom: 3rem;
 } 
 
 #section-stranger-things-trailer .section-texts{
@@ -108,6 +118,7 @@ section {
 }
 
 #section-stranger-things-gallery{
+    margin-top: 5rem;
     background: var(--background-lamp-image) 200% / 75% no-repeat;
 }
 
@@ -142,8 +153,26 @@ section {
 }
 
 #section-form{
+    position: relative;
     flex-direction: column;
     align-items: center;
+    margin-top: 5rem;
+    padding: 3rem 0;
+    z-index: 2;
+}
+
+#section-form::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(var(--header-background-color), #ffffff04),url('../images/backgrounds/florest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 90%;
+    filter: saturate(0);
+    opacity: 0.2;
+    z-index: -1;
 }
 
 #section-form p{
@@ -154,6 +183,7 @@ section {
 .form-content{
     display: flex;
     align-items: center;
+    gap: 1rem;
     margin-top: 2.5rem;
 }
 
@@ -161,6 +191,93 @@ section {
     width: 29.6rem;
     color: var(--highlight-color);
 }
+
 .form-content span{
     color: var(--primary-color);
+}
+
+.form-content form{
+    display: flex;
+    flex-direction: column;
+    width: 36.1rem;
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+    padding: 1.5rem;
+    box-shadow: var(--highlight-color) 1.56rem 1.5rem;
+}
+
+.form-content form label{
+    margin-bottom: 0.5rem;
+}
+
+.form-content form input{
+    height: 2.9rem;
+    margin-bottom: 1rem;
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    border: 0.1rem var(--primary-color-contrast) solid;
+}
+
+.form-content form textarea{
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    border: 0.1rem var(--primary-color-contrast) solid;
+}
+
+#btnSubscribe{
+    margin-top: 1rem;
+    background-color: var(--highlight-color);
+    border: none;
+}
+
+.light-theme #btnSubscribe{
+    color: var(--primary-color-contrast);
+}
+
+.dark-theme #btnSubscribe{
+    color: var(--primary-color);
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    height: 10rem;
+    background-color: var(--footer-background-color);
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before,
+footer::after {
+  content: "";
+  width: 300px;
+  height: 200px;
+  background-image: url("../images/footer/tape.svg") ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: -100px;
+}
+
+.dark-theme footer::before,
+.dark-theme footer::after{
+    opacity: 0.1;
+}
+
+footer::before {
+  left: -50px;
+  transform: rotateZ(-20deg);
+}
+
+footer::after {
+  right: -5px;
+  transform: rotateZ(15deg);
+}
+
+footer p{
+    width: 31rem;
+    text-align: center;
 }
